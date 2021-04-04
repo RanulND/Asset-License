@@ -10,6 +10,7 @@ import { LoginAdminComponent } from './Container/login-admin/login-admin.compone
 import { ContactUsComponent } from './Container/contact-us/contact-us.component';
 import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { MedicalComponent } from './Container/medical/medical.component';
+import { LoginComponent } from './Component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MedicalComponent } from './Container/medical/medical.component';
     LoginAdminComponent,
     ContactUsComponent,
     AboutUsComponent,
-    MedicalComponent
+    MedicalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
