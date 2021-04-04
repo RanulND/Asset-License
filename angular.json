@@ -119,6 +119,10 @@
               "devServerTarget": "asset-license-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
