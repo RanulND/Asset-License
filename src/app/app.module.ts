@@ -7,6 +7,9 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { HomeComponent } from './Container/home/home.component';
 import { LoginAdminComponent } from './Container/login-admin/login-admin.component';
+import { ContactUsComponent } from './Container/contact-us/contact-us.component';
+import { AboutUsComponent } from './Container/about-us/about-us.component';
+import { MedicalComponent } from './Container/medical/medical.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { LoginAdminComponent } from './Container/login-admin/login-admin.compone
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    LoginAdminComponent
+    LoginAdminComponent,
+    ContactUsComponent,
+    AboutUsComponent,
+    MedicalComponent
   ],
   imports: [
     BrowserModule,
