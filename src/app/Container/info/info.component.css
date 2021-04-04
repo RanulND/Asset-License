@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+/* @import url(fontawesome-all.min.css);*/
 
 
 
@@ -2400,7 +2400,7 @@ input, select, textarea {
 				border-color: #e6e6e6;
 			}
 
-/* List */
+/* List*/
 
 	ol {
 		list-style: decimal;
@@ -2454,7 +2454,7 @@ input, select, textarea {
 
 	ul.alt > li {
 		border-top-color: #e6e6e6;
-	}
+	} */
 
 /* Actions */
 
@@ -2817,7 +2817,7 @@ input, select, textarea {
 				text-align: center !important;
 			}
 
-	}
+	} */
 
 /* Table */
 
@@ -3602,11 +3602,11 @@ input, select, textarea {
 			padding: 2em 1em 0.1em 1em ;
 		}
 
-	}
+	} 
 
 /* Header */
 
-	#header {
+	 #header {
 		background-color: #4696e5;
 		color: #d1e5f9;
 		padding: 4.5em 0 2.5em 0 ;
@@ -3622,7 +3622,7 @@ input, select, textarea {
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("images/overlay.png"), url("images/pattern-size1.svg");
+		/* background-image: url("images/overlay.png"), url("images/pattern-size1.svg"); */
 		background-position: top left, center center;
 		background-attachment: fixed, fixed;
 		background-size: auto, cover;
@@ -3887,7 +3887,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#header {
-				background-image: url("images/overlay.png"), url("images/pattern-size2.svg");
+				/* background-image: url("images/overlay.png"), url("images/pattern-size2.svg"); */
 			}
 
 		}
@@ -3938,7 +3938,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				background-image: url("images/overlay.png"), url("images/pattern-size3.svg");
+				/* background-image: url("images/overlay.png"), url("images/pattern-size3.svg"); */
 			}
 
 				#header h1 {
@@ -4052,7 +4052,7 @@ input, select, textarea {
 			transform: translateY(2em);
 		}
 
-	}
+	} 
 
 /* Main */
 
@@ -4153,7 +4153,7 @@ input, select, textarea {
       }
       
       a:hover, a:active, .edited1 {
-        background-color: rgb(58, 58, 173);}
+        background-color: rgb(58, 58, 173);} */
 
         
 
@@ -4177,4 +4177,4 @@ input, select, textarea {
 
 		body.is-preload #header .image img {
 			opacity: 1;
-		}
+		} 

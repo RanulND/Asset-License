@@ -26,7 +26,6 @@ import { LoginComponent } from './Component/login/login.component';
     AboutUsComponent,
     MedicalComponent,
     LoginComponent,
-    MedicalComponent
   ],
   imports: [
     BrowserModule,
