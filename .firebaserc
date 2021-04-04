@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "asset-license": {
+      "hosting": {
+        "asset-license-app": [
+          "asset-license"
+        ]
+      }
+    }
+  }
+}
