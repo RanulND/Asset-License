@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { HomeComponent } from './Container/home/home.component';
+import { InfoComponent } from './Container/info/info.component';
 import { LoginAdminComponent } from './Container/login-admin/login-admin.component';
 import { ContactUsComponent } from './Container/contact-us/contact-us.component';
 import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { MedicalComponent } from './Container/medical/medical.component';
 import { LoginComponent } from './Component/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { LoginComponent } from './Component/login/login.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    InfoComponent,
     LoginAdminComponent,
     ContactUsComponent,
     AboutUsComponent,
     MedicalComponent,
-    LoginComponent
+    LoginComponent,
+    MedicalComponent
   ],
   imports: [
     BrowserModule,
