@@ -19,7 +19,7 @@ import { ContactUsComponent } from './Container/contact-us/contact-us.component'
 import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { MedicalComponent } from './Container/medical/medical.component';
 import { LoginComponent } from './Component/login/login.component';
-import { UserAccComponent } from './Component/user-acc/user-acc.component';
+import { UserAccComponent } from './Container/user-acc/user-acc.component';
 
 
 @NgModule({
