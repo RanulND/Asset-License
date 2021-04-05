@@ -20,6 +20,7 @@ import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { MedicalComponent } from './Container/medical/medical.component';
 import { LoginComponent } from './Component/login/login.component';
 import { UserAccComponent } from './Container/user-acc/user-acc.component';
+import { ApplicationComponent } from './Component/application/application.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UserAccComponent } from './Container/user-acc/user-acc.component';
     MedicalComponent,
     LoginComponent,
     UserAccComponent,
+    ApplicationComponent,
   ],
   imports: [
     BrowserModule,
