@@ -1,0 +1,13 @@
+.headImage{
+    margin-top: -10px;
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+}
+.col-6{
+    border-radius: 5px;
+    /* border-color: black; */
+    box-shadow: black;
+}
