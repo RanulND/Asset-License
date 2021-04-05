@@ -3886,9 +3886,9 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
-			#header {
+			/* #header {
 				/* background-image: url("images/overlay.png"), url("images/pattern-size2.svg"); */
-			}
+			/* } */ 
 
 		}
 
@@ -3937,9 +3937,9 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#header {
+			/* #header { */
 				/* background-image: url("images/overlay.png"), url("images/pattern-size3.svg"); */
-			}
+			/* } */
 
 				#header h1 {
 					font-size: 2em;
