@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from './Component/sign-in/sign-in.component';
 import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { ContactUsComponent } from './Container/contact-us/contact-us.component';
 import { HomeComponent} from './Container/home/home.component'
 import { InfoComponent } from './Container/info/info.component';
 import { LoginAdminComponent } from './Container/login-admin/login-admin.component';
 import { MedicalComponent } from './Container/medical/medical.component';
+import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.component';
+import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,14 @@ const routes: Routes = [
   {
     path:'info',
     component: InfoComponent
+  },
+  {
+    path:'sign-in',
+    component: SignInPageComponent
+  },
+  {
+    path:'sign-up',
+    component: SignUpPageComponent
   }
   
 ];

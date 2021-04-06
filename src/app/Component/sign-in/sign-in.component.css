@@ -1,0 +1,26 @@
+.SignInCard{
+    max-width: 410px;
+    /* min-height: 350px; */
+    margin-top: 4%;
+}
+
+.input{
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h2,
+p{
+    color: aliceblue;
+}
+
+input{
+    background: #efefef;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}

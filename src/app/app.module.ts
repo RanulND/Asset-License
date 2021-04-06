@@ -21,6 +21,10 @@ import { MedicalComponent } from './Container/medical/medical.component';
 import { LoginComponent } from './Component/login/login.component';
 import { UserAccComponent } from './Container/user-acc/user-acc.component';
 import { ApplicationComponent } from './Component/application/application.component';
+import { SignInComponent } from './Component/sign-in/sign-in.component';
+import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.component';
+import { SignUpComponent } from './Component/sign-up/sign-up.component';
+import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 
 
 @NgModule({
@@ -37,6 +41,10 @@ import { ApplicationComponent } from './Component/application/application.compon
     LoginComponent,
     UserAccComponent,
     ApplicationComponent,
+    SignInComponent,
+    SignInPageComponent,
+    SignUpComponent,
+    SignUpPageComponent,
   ],
   imports: [
     BrowserModule,
