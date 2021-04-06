@@ -2717,8 +2717,8 @@ input, select, textarea {
 
 		header.major:after {
 			content: '';
-			border-bottom: solid 2px #e6e6e6;
-			display: block;
+			/* border-bottom: solid 2px #e6e6e6; */
+			/* display: block; */
 			width: 4em;
 			margin: 2em auto 0 auto;
 		}

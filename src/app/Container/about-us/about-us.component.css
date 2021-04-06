@@ -1,0 +1,175 @@
+.wrapper row2{
+    /* position: relative; */
+    left: 100px;
+    right: 100px;
+}
+#about-us{
+    display:block; 
+    width:100%; 
+    line-height:1.6em;
+}
+
+#about-us h1, #about-us h2{
+    text-transform:uppercase;
+}
+
+#about-us #about-intro{
+    margin-bottom:50px;
+    margin-left: 350px;
+    width: 850px;
+}
+#about-us #about-intro blockquote{
+    position:relative; 
+    margin:0; 
+    padding:0;
+   
+}
+#about-us #about-intro blockquote p{
+    margin:0; 
+    padding:0 0 0 60px; 
+    font-size:25px; 
+    font-style:italic; 
+    line-height:1.6em;
+    text-align: center;
+}
+#about-us #about-intro blockquote p span{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    font-size:150px; 
+    line-height:.8em;
+   
+}
+#about-us #about-intro .panorama .imgholder{
+    padding:9px;
+    height: 400px; 
+    width: 850px;
+}
+#about-us #about-intro h2{}
+#about-us #about-intro p{
+    text-align: center;
+}
+#about-us #about-intro p:first-child{}
+
+#about-us #skillset{
+    margin-bottom:0; 
+    margin-left: 350px;
+}
+#about-us #skillset article{
+    margin:30px 0 0 0;
+}
+#about-us #skillset article:first-child{
+    margin-top:0;
+}
+#about-us #skillset article .fl_left{
+    height: 150px; 
+    width: 150px;
+}
+#about-us #skillset article .fl_left img{
+    padding:9px; 
+    border:1px solid #CCCCCC;
+    height: 150px; 
+    width: 150px;
+}
+img.fl_left {
+    float: left;
+}
+#about-us #skillset article .fl_right
+{
+    width:750px; 
+    padding-top:0px;
+    position: relative; 
+    left: 100px;
+}
+#about-us #skillset article .fl_right h2{
+    margin:0; 
+    padding:0; 
+    text-transform:none;
+}
+#about-us #skillset article .fl_right p{
+    margin:15px 0 0 0; 
+    padding:0;
+}
+#about-us #skillset article .fl_right p:first-child{}
+#about-us #team{
+    margin-bottom:0; 
+    margin-left: 270px;
+    width: 1000px;
+}
+
+#design-cast {
+    position: relative;
+    overflow: hidden;
+    left: 0px;
+    
+}
+#design-cast h2{
+    text-align: center;
+}
+.member {
+    float: right;
+    width: 22%;
+    margin: 1% 1% 45px 1%;
+}
+
+.name {
+    position: absolute;
+    bottom: 0px;
+}
+
+.member img {
+    width: 100%;
+    display: block;
+}
+
+/* second style sheet */
+
+.one_half, 
+.one_third, .two_third, 
+ .two_quarter, .three_quarter, 
+.one_fifth, .two_fifth, .three_fifth, .four_fifth{
+    display:inline-block; 
+    float:left; 
+    margin:0 0 0 20px; 
+    list-style:none;
+}
+
+.one_third, .two_third
+{margin:0 0 0 30px;
+}
+
+.first, 
+.one_half:first-child, 
+.one_third:first-child, .two_third:first-child, 
+.one_quarter:first-child, .two_quarter:first-child, .three_quarter:first-child, 
+.one_fifth:first-child, .two_fifth:first-child, .three_fifth:first-child, .four_fifth:first-child{
+    margin-left:0;
+}
+
+.two_half, .three_third, .four_quarter, .five_fifth{
+    display:block; 
+    width:100%; 
+    clear:both;
+}
+
+/*----------------------------------------------Half Grid-------------------------------------*/
+
+.one_half{width:470px;}
+
+/*----------------------------------------------Third Grid-------------------------------------*/
+
+.one_third{width:300px;}
+.two_third{width:630px;}
+
+/*----------------------------------------------Quarter Grid-------------------------------------*/
+
+.one_quarter{width:225px;}
+.two_quarter{width:470px;}
+.three_quarter{width:1000px;}
+
+/*----------------------------------------------Fifth Grid-------------------------------------*/
+
+.one_fifth{width:176px;}
+.two_fifth{width:372px;}
+.three_fifth{width:568px;}
+.four_fifth{width:764px;}
