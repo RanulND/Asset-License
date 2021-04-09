@@ -7,7 +7,7 @@
     </button>
     
     <div class="collapse navbar-collapse text-center" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px;">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll " >
         <li class="nav-item">
           <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="#">Home</a>
         </li>
@@ -31,8 +31,8 @@
           <a class="nav-link" href="#" routerLink="/aboutUs" style="color: aliceblue;">About Us</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-danger" type="submit" routerLink = "/sign-in">Login</button>
+      <form class="d-flex text-center">
+        <button class="btn btn-outline-danger"  (click) = "signOut()">Sign Out</button>
       </form>
     </div>
   </div>

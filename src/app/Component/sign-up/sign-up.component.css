@@ -1,7 +1,7 @@
 .SignUpCard{
     max-width: 410px;
     /* min-height: 350px; */
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 .input{
@@ -23,4 +23,8 @@ input{
 
 a{
     text-decoration: none;
+}
+
+.btn{
+    font-weight: bold;
 }
