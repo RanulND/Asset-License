@@ -35,7 +35,8 @@ export class AuthService {
           this.route.navigate(['/sign-in']);
           return of({
             email: null,
-            uid: null
+            uid: null,
+            nic: null
           } as User);
         }
       })
@@ -59,9 +60,9 @@ export class AuthService {
     });
   }
 
-  async SignUpWithEmail(email: string, password: string, name: string): Promise<void> {
+  async SignUpWithEmail(email: string, password: string, name: string, nic: string): Promise<void> {
     const signUpResult = await this.auth.createUserWithEmailAndPassword(email, password);
-    return this.updateUser(signUpResult.user, null, name);
+    return this.updateUser(signUpResult.user, null, name, nic);
   }
   async signInWithEmail(email: string, password: string): Promise<any> {
     const signInResult = await this.auth.signInWithEmailAndPassword(email, password);
@@ -74,9 +75,9 @@ export class AuthService {
     return this.route.navigate(['/']);
   }
 
-  private updateUser(user: firebase.User, DocSnapshot?: DocumentSnapshot<User>, name?: string): Promise<void> {
+  private updateUser(user: firebase.User, DocSnapshot?: DocumentSnapshot<User>, name?: string, nic?: string): Promise<void> {
     let userData: User;
-    const firebaseUserData = (({ uid, email, displayName, photoURL }) => ({ uid, email, displayName, photoURL }))(user);
+    const firebaseUserData = (({ uid, email, displayName, photoURL,}) => ({ uid, email, displayName, photoURL}))(user);
 
     if (DocSnapshot && DocSnapshot.exists) {
       userData = DocSnapshot.data() as User;
@@ -95,6 +96,13 @@ export class AuthService {
         userData = {
           ...userData,
           displayName: name
+        }
+      }
+
+      if (nic) {
+        userData = {
+          ...userData,
+          nic: nic
         }
       }
     }

@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit {
     if(this.user.email === '' || this.user.name === '' || this.user.password === '' || this.user.nic === ''){
       alert("All the fields should have a value");
     }else {
-      await this.auth.SignUpWithEmail(this.user.email, this.user.password, this.user.name)
+      await this.auth.SignUpWithEmail(this.user.email, this.user.password, this.user.name, this.user.nic)
       .then(() => this.route.navigate(['/']))
       .catch(err => {
         console.log(err);

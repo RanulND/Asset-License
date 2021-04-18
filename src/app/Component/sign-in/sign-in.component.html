@@ -20,7 +20,7 @@
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div> -->
         <div class="input text-center row">
-            <button type="submit" class="btn btn-light mt-3" (click)="signInWithEmail()" >Sign In</button>
+            <button type="submit" class="btn btn-light mt-3" (click)="signInWithEmail()" [disabled] = "!user.email || !user.password">Sign In</button>
         </div>
         <div class="text-center mt-3 row input">
             <div class="col-5">
