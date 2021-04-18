@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { User } from './user.model';
 import { switchMap } from 'rxjs/operators';
-import firebase from 'firebase/app';
-import { promise } from 'selenium-webdriver';
+import firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +25,7 @@ export class AuthService {
       switchMap(user => {
         if (user) {
           this.authState = true;
-          if (this.route.url.includes('auth')) {
+          if (this.route.url.includes('/sign-in')) {
             this.route.navigate(['/']);
           }
           this.userId = user.uid;

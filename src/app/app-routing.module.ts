@@ -9,6 +9,7 @@ import { LoginAdminComponent } from './Container/login-admin/login-admin.compone
 import { MedicalComponent } from './Container/medical/medical.component';
 import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
+import { UserAccComponent } from './Container/user-acc/user-acc.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path:'sign-up',
     component: SignUpPageComponent
+  },
+  {
+    path:'user',
+    component: UserAccComponent
   }
   
 ];

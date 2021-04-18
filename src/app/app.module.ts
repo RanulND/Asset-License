@@ -26,6 +26,8 @@ import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.compo
 import { SignUpComponent } from './Component/sign-up/sign-up.component';
 import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 import { AuthService } from './Services/auth.service';
+import { AdminPoliceComponent } from './Component/admin-police/admin-police.component';
+import { AdminDMTComponent } from './Component/admin-dmt/admin-dmt.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { AuthService } from './Services/auth.service';
     SignInPageComponent,
     SignUpComponent,
     SignUpPageComponent,
+    AdminPoliceComponent,
+    AdminDMTComponent,
   ],
   imports: [
     BrowserModule,
