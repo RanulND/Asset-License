@@ -3,7 +3,8 @@ export class User {
     email: string;
     photoURL?: string;
     displayName?: string;
-    isAdmin: boolean;
+    isAdminPolice: boolean;
+    isAdminDMT: boolean
     nic: string;
     dob: Date;
 }

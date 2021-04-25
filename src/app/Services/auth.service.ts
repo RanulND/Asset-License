@@ -89,7 +89,8 @@ export class AuthService {
       userData = {
         ...userData, // meka balanna error
         ...firebaseUserData,
-        isAdmin: false
+        isAdminPolice: false,
+        isAdminDMT: false
       };
 
       if (name) {
@@ -124,4 +125,62 @@ export class AuthService {
   get authUserRef(): DocumentReference {
     return this.afs.collection('users').doc<User>(this.userId).ref;
   }
+// authstate: any = null;
+  
+//   constructor(
+//     public auth: AngularFireAuth,
+//     private afs: AngularFirestore,
+//     private route: Router
+//   ) {
+//     this.auth.authState.subscribe((auth) => {
+//       this.authstate = auth;
+//     })
+//    }
+
+//    async SignUpWithEmail(email: string, password: string, name: string, nic: string): Promise<void> {
+//       const signUpResult = await this.auth.createUserWithEmailAndPassword(email, password);
+//       return this.updateUser(signUpResult.user, null, name, nic);
+// }
+
+// async signInWithEmail(email: string, password: string): Promise<any> {
+//     const signInResult = await this.auth.signInWithEmailAndPassword(email, password);
+//     return this.getUser(signInResult.user);
+//   }
+
+// private updateUser(user: firebase.User, DocSnapshot?: DocumentSnapshot<User>, name?: string, nic?: string): Promise<void> {
+//     let userData: User;
+//     const firebaseUserData = (({ uid, email, displayName, photoURL,}) => ({ uid, email, displayName, photoURL}))(user);
+
+//     if (DocSnapshot && DocSnapshot.exists) {
+//       userData = DocSnapshot.data() as User;
+//       userData = {
+//         ...userData,
+//         ...firebaseUserData
+//       };
+//     } else {
+//       userData = {
+//         ...userData, // meka balanna error
+//         ...firebaseUserData,
+//         isAdminPolice: false,
+//         isAdminDMT: false
+//       };
+
+//       if (name) {
+//         userData = {
+//           ...userData,
+//           displayName: name
+//         }
+//       }
+
+//       if (nic) {
+//         userData = {
+//           ...userData,
+//           nic: nic
+//         }
+//       }
+//     }
+//     return this.afs.collection('users').doc<User>(user.uid).set(userData, {merge: true});
+//    }
+
+
 }

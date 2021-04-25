@@ -5,13 +5,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class PoliceAdminService {
+export class AdminService {
 
   constructor(
     public fireservice: AngularFirestore
   ) { }
 
-  add_newrecord(record){
+  add_new_police_record(record){
     return this.fireservice.collection('reports').add(record);
   }
+
 }

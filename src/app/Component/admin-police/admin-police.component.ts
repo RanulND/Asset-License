@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PoliceAdminService } from 'src/app/Services/police-admin.service';
+import { AdminService } from 'src/app/Services/admin.service';
 
 @Component({
   selector: 'app-admin-police',
@@ -13,7 +13,7 @@ export class AdminPoliceComponent implements OnInit {
   violation: string;
   date: Date;
 
-  constructor(public policeAdminService: PoliceAdminService) { }
+  constructor(public policeAdminService: AdminService) { }
 
   ngOnInit(): void {
   } 
@@ -25,7 +25,7 @@ export class AdminPoliceComponent implements OnInit {
     record['violation'] = this.violation;
     record['date'] = this.date;
 
-    this.policeAdminService.add_newrecord(record).then(res => {
+    this.policeAdminService.add_new_police_record(record).then(res => {
 
       this.nic = "";
       this.date = undefined;
