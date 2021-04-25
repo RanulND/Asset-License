@@ -14,7 +14,6 @@ export class AuthService {
   user$: Observable<User>;
   userId: string = null;
   authState: boolean = false;
-  adminAccess = false;
 
   constructor(
     public auth: AngularFireAuth,
@@ -25,14 +24,13 @@ export class AuthService {
       switchMap(user => {
         if (user) {
           this.authState = true;
-          if (this.route.url.includes('/sign-in')) {
+          if (this.route.url.includes('sign-in')) {
             this.route.navigate(['/']);
           }
           this.userId = user.uid;
-          return this.afs.collection('users').doc<User>(user.uid).valueChanges();
+          return this.afs.collection('users').doc<User>(this.getToken()).valueChanges();
         } else {
           this.userId = null;
-          this.route.navigate(['/sign-in']);
           return of({
             email: null,
             uid: null,
@@ -42,28 +40,26 @@ export class AuthService {
       })
     );
   }
-  async SignIn(provider: 'google' | 'email'): Promise<any> {
-    let providerClass;
-    const authprovider = firebase.auth;
-
-    switch (provider) {
-      case 'google':
-        providerClass = new authprovider.GoogleAuthProvider();
-        break;
-      default:
-        break;
-    }
-
-    const SignInRes = await this.auth.signInWithPopup(providerClass);
-    this.afs.collection('users').doc<User>(SignInRes.user.uid).snapshotChanges().subscribe(res => {
-      return this.updateUser(SignInRes.user, res.payload);
-    });
-  }
+ 
 
   async SignUpWithEmail(email: string, password: string, name: string, nic: string): Promise<void> {
     const signUpResult = await this.auth.createUserWithEmailAndPassword(email, password);
-    return this.updateUser(signUpResult.user, null, name, nic);
+
+    let userData: User;
+    const firebaseUserData = (({ uid, email }) => ({ uid, email }))(signUpResult.user);
+
+    userData = {
+      ...firebaseUserData,
+      isAdminPolice: false,
+      isAdminDMT: false,
+      nic: nic,
+      displayName: name
+    };
+
+    this.setToken(nic);
+    return this.afs.collection('users').doc<User>(nic).set(userData, {merge: true});
   }
+  
   async signInWithEmail(email: string, password: string): Promise<any> {
     const signInResult = await this.auth.signInWithEmailAndPassword(email, password);
     return this.getUser(signInResult.user);
@@ -72,50 +68,25 @@ export class AuthService {
   async signOut(): Promise<boolean> {
     await this.auth.signOut();
     this.authState = false;
+    this.clearToken();
     return this.route.navigate(['/']);
   }
 
-  private updateUser(user: firebase.User, DocSnapshot?: DocumentSnapshot<User>, name?: string, nic?: string): Promise<void> {
-    let userData: User;
-    const firebaseUserData = (({ uid, email, displayName, photoURL,}) => ({ uid, email, displayName, photoURL}))(user);
+  private getUser(user: firebase.User) {
+    return this.afs.collection<User>('users', ref => ref.where('uid', '==', user.uid)).get().subscribe({
+      next: (docs) => {
+        let nic: string;
+        docs.forEach(doc => {
+          nic = doc.id
+        });
 
-    if (DocSnapshot && DocSnapshot.exists) {
-      userData = DocSnapshot.data() as User;
-      userData = {
-        ...userData,
-        ...firebaseUserData
-      };
-    } else {
-      userData = {
-        ...userData, // meka balanna error
-        ...firebaseUserData,
-        isAdminPolice: false,
-        isAdminDMT: false
-      };
-
-      if (name) {
-        userData = {
-          ...userData,
-          displayName: name
-        }
+        this.setToken(nic);
       }
-
-      if (nic) {
-        userData = {
-          ...userData,
-          nic: nic
-        }
-      }
-    }
-    return this.afs.collection('users').doc<User>(user.uid).set(userData, {merge: true});
-   }
-
-   private getUser(user: firebase.User): Promise<any> {
-    return this.afs.collection('users').doc<User>(user.uid).get().toPromise();
+    });
   }
 
-  updateUserData(user: User) {
-    return this.afs.collection('users').doc<User>(user.uid).update(user);
+  updateUserData(user: Partial<User>) {
+    return this.afs.collection('users').doc<User>(this.getToken()).update(user);
   }
 
   get isAuthenticated(): boolean {
@@ -124,6 +95,22 @@ export class AuthService {
 
   get authUserRef(): DocumentReference {
     return this.afs.collection('users').doc<User>(this.userId).ref;
+  }
+
+  nic_verify(nic: string){
+    
+  }
+
+  private setToken(nic: string) {
+    localStorage.setItem('token', nic);
+  }
+
+  private getToken() {
+    return localStorage.getItem('token');
+  }
+
+  private clearToken() {
+    localStorage.removeItem('token');
   }
 // authstate: any = null;
   

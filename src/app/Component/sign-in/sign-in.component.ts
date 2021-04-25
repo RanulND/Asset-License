@@ -40,13 +40,13 @@ export class SignInComponent implements OnInit {
     }
   }
 
-  async signInWithGoogle(): Promise<void> {
-    await this.auth.SignIn('google')
-    .then(() => this.route.navigate(['/']))
-    .catch(err => {
-      console.log(err);
-      alert(err);
-    });
-  }
+  // async signInWithGoogle(): Promise<void> {
+  //   await this.auth.SignIn('google')
+  //   .then(() => this.route.navigate(['/']))
+  //   .catch(err => {
+  //     console.log(err);
+  //     alert(err);
+  //   });
+  // }
 
 }

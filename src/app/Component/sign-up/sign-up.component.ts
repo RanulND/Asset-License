@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Services/auth.service';
 
@@ -11,7 +12,8 @@ export class SignUpComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private route: Router
+    private route: Router,
+    private afs: AngularFirestore
   ) { }
 
   user = {
@@ -37,19 +39,14 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  async signInWithGoogle(): Promise<void> {
-    await this.auth.SignIn('google')
-    .then(() => this.route.navigate(['/']))
-    .catch(err => {
-      console.log(err);
-      alert(err);
-    });
-  }
-
   handleOnKeyDown(e: KeyboardEvent): void {
     if (e.key === 'Enter') {
       this.signUpWithEmail();
     }
+
+  }
+
+  async verify(){
 
   }
 }
