@@ -66,9 +66,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>2021/01/01</td>
-                <td>High Speed</td>
+            <tr *ngFor="let policeRecord of policeRecords">
+                <td>{{date}}</td>
+                <td>{{violation}}</td>
             </tr>
             <tr>
                 <td>2019/10/01</td>

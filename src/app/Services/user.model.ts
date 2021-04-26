@@ -5,5 +5,6 @@ export class User {
     isAdminPolice: boolean;
     isAdminDMT: boolean
     nic: string;
+    // policeRecord: string[];
     // dob: Date;
 }

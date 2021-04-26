@@ -53,7 +53,8 @@ export class AuthService {
       isAdminPolice: false,
       isAdminDMT: false,
       nic: nic,
-      displayName: name
+      displayName: name,
+      // policeRecord: []
     };
 
     this.setToken(nic);

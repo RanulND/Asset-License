@@ -20,12 +20,4 @@ export class NavbarComponent implements OnInit {
   signOut(){
     this.auth.signOut();
   }
-
-  signIn(): void {
-    this.route.navigate(['/sign-in']);
-  }
-
-  signUp(): void {
-    this.route.navigate(['/sign-up']);
-  }
 }

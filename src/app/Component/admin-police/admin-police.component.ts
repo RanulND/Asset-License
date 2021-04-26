@@ -19,7 +19,7 @@ export class AdminPoliceComponent implements OnInit {
   } 
 
   addRecord(){
-    // alert("danata goda");
+    //  alert("danata goda");
     let record = {};
     record['nic'] = this.nic;
     record['violation'] = this.violation;
