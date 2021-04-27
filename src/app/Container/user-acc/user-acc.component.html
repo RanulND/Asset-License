@@ -2,7 +2,12 @@
 <div>
     <h1 style="text-align: center;">User</h1>
 </div>
-<div class="container-sm mt-3" style="background-color: bisque;">
+<div *ngIf="loading">
+    <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div class="container-sm mt-3" style="background-color: bisque;"  *ngIf="!loading">
     <div class="row">
         <div class="col col-lg-3">
             <div class="p-5">
@@ -11,8 +16,8 @@
         </div>
         <div class="col-9 p-5">
             <div class="row bg-light">
-                <div *ngIf="loading">Loading...</div>
-                <table *ngIf="!loading">
+               <!-- / -->
+                <table>
                     <tr>
                         <td>
                             <h5>User</h5>
@@ -67,20 +72,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let policeRecord of policeRecords">
-                <td>{{date}}</td>
-                <td>{{violation}}</td>
-            </tr>
-            <tr>
-                <td>2019/10/01</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>2021/01/01</td>
-                <td>bla bla</td>
-            </tr>
-            <tr>
-                <td>2021/01/01</td>
-                <td>High Speed</td>
+                <td>{{policeRecord.date}}</td>
+                <td>{{policeRecord.violation}}</td>
             </tr>
         </tbody>
     </table>

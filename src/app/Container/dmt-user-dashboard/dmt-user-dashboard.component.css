@@ -1,0 +1,14 @@
+.searchBar{
+    padding-left: 13%;
+    padding-right: 3%;
+}
+
+.user{
+    font-size: 110%;
+    font-weight: 500;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}

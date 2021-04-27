@@ -24,11 +24,8 @@ export class AuthService {
       switchMap(user => {
         if (user) {
           this.authState = true;
-          if (this.route.url.includes('sign-in')) {
-            this.route.navigate(['/']);
-          }
           this.userId = user.uid;
-          return this.afs.collection('users').doc<User>(this.getToken()).valueChanges();
+          return this.afs.collection('users').doc<User>(user.uid).valueChanges();
         } else {
           this.userId = null;
           return of({
@@ -57,11 +54,13 @@ export class AuthService {
       // policeRecord: []
     };
 
-    this.setToken(nic);
-    return this.afs.collection('users').doc<User>(nic).set(userData, {merge: true});
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+    // this.setToken(nic);
+    return this.afs.collection('users').doc<User>(userData.uid).set(userData, {merge: true});
   }
   
-  async signInWithEmail(email: string, password: string): Promise<any> {
+  async signInWithEmail(email: string, password: string) {
     const signInResult = await this.auth.signInWithEmailAndPassword(email, password);
     return this.getUser(signInResult.user);
   }
@@ -69,25 +68,16 @@ export class AuthService {
   async signOut(): Promise<boolean> {
     await this.auth.signOut();
     this.authState = false;
-    this.clearToken();
+    localStorage.removeItem('userData');
     return this.route.navigate(['/']);
   }
 
   private getUser(user: firebase.User) {
-    return this.afs.collection<User>('users', ref => ref.where('uid', '==', user.uid)).get().subscribe({
-      next: (docs) => {
-        let nic: string;
-        docs.forEach(doc => {
-          nic = doc.id
-        });
-
-        this.setToken(nic);
-      }
-    });
+    return this.afs.collection<User>('users').doc(user.uid).get();
   }
 
   updateUserData(user: Partial<User>) {
-    return this.afs.collection('users').doc<User>(this.getToken()).update(user);
+    return this.afs.collection('users').doc<User>(user.uid).update(user);
   }
 
   get isAuthenticated(): boolean {
@@ -102,17 +92,59 @@ export class AuthService {
     
   }
 
-  private setToken(nic: string) {
-    localStorage.setItem('token', nic);
+  getUserData(): User {
+    return JSON.parse(localStorage.getItem('userData')) as User;
   }
 
-  private getToken() {
-    return localStorage.getItem('token');
+  get isDmtAdmin(): boolean {
+    const user = JSON.parse(localStorage.getItem('userData')) as User;
+    if(user)
+      return user.isAdminDMT;
+    else
+      return false;
   }
 
-  private clearToken() {
-    localStorage.removeItem('token');
+  get isPoliceAdmin(): boolean {
+    const user = JSON.parse(localStorage.getItem('userData')) as User;
+    if(user)
+      return user.isAdminPolice;
+    else
+      return false;
   }
+
+  get isUser(): boolean {
+    const user = JSON.parse(localStorage.getItem('userData')) as User;
+    if(!user){
+      return true;
+    }
+    if(user.isAdminDMT || user.isAdminPolice){
+      return false;
+    }else
+      return true;
+  }
+  // private setToken(nic: string) {
+  //   localStorage.setItem('token', nic);
+  // }
+
+  // private getToken() {
+  //   const token = localStorage.getItem('token');
+  //   let intervalFunc;
+
+  //   if(token && token !== '')
+  //     return localStorage.getItem('token');
+  //   else {
+  //     intervalFunc = setInterval(() => {
+  //       if(token && token !== '') {
+  //         clearInterval(intervalFunc);
+  //         return localStorage.getItem('token');
+  //       }
+  //     })
+  //   }
+  // }
+
+  // private clearToken() {
+  //   localStorage.removeItem('token');
+  // }
 // authstate: any = null;
   
 //   constructor(

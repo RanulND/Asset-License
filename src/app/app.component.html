@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div *ngIf="auth.user$ | async as user; else loading">
+    <router-outlet></router-outlet>
+</div>
+
+<ng-template #loading>
+    <div class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+        <div>
+            Loading...
+        </div>
+    </div>
+</ng-template>

@@ -14,12 +14,7 @@ import { User } from 'src/app/Services/user.model';
 export class UserAccComponent implements OnInit {
   user: User;
   loading = true;
-  policeRecords: {
-    // id: string;
-    // date:Date;
-    // violation: string;
-
-  };
+  policeRecords: any[] = [];
   
   constructor( public authservice: AuthService, private router: Router, private adminservice: AdminService) { }
 
@@ -27,32 +22,23 @@ export class UserAccComponent implements OnInit {
     this.authservice.user$.subscribe({
       next: (user) => {
         this.user = user;
-        this.loading = false;
+
+        this.adminservice.getAllUserRrecord(user.nic).subscribe(data => {
+          this.policeRecords = data.map(snap => {
+            return {
+              id: snap.payload.doc.id,
+              ...snap.payload.doc.data()
+            }
+          });
+
+          console.log(this.policeRecords);
+          this.loading = false;
+        })
       },
       error: (err) => {
         console.log(err);
       },
     });
-
-  //   this.adminservice.getAllUserRrecord(this.user.nic).subscribe(data => {
-  //     this.policeRecords = data.map(e => {
-  //       return {
-  //         id: e.payload.doc.id,
-  //         date: e.payload.doc.data()['date'],
-  //         violation: e.payload.doc.data()['violation']
-  //       };
-  //     })
-  //   })
-
-  this.adminservice.getAllUserRrecord(this.user.nic).subscribe({
-    next: (docs) => {
-      docs.forEach(doc => {
-        let date = doc.date;
-        let violation = doc.violation;
-      });
-    }
-  });
-
    }
 
   

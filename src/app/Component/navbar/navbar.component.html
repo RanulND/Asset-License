@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse text-center" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll " >
         <li class="nav-item">
-          <a class="nav-link active" style="color: aliceblue;" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" style="color: aliceblue;" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/medical">Reservation</a>
@@ -31,8 +31,12 @@
           <a class="nav-link" href="#" routerLink="/aboutUs" style="color: aliceblue;">About Us</a>
         </li>
       </ul>
-      <form class="d-flex text-center">
+      <form class="d-flex text-center" *ngIf="auth.authState">
         <button class="btn btn-outline-danger"  (click) = "signOut()">Sign Out</button>
+      </form>
+      <form class="d-flex text-center" *ngIf="!auth.authState">
+        <button class="btn btn-outline-danger mx-2"  (click) = "signIn()">Sign In</button>
+        <button class="btn btn-outline-danger mx-2"  (click) = "signUp()">Sign Up</button>
       </form>
     </div>
   </div>

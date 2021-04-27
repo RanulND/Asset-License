@@ -30,12 +30,21 @@ export class SignUpComponent implements OnInit {
     if(this.user.email === '' || this.user.name === '' || this.user.password === '' || this.user.nic === ''){
       alert("All the fields should have a value");
     }else {
-      await this.auth.SignUpWithEmail(this.user.email, this.user.password, this.user.name, this.user.nic)
-      .then(() => this.route.navigate(['/']))
-      .catch(err => {
+      try {
+        await this.auth.SignUpWithEmail(this.user.email, this.user.password, this.user.name, this.user.nic);
+        
+        const user = this.auth.getUserData();
+        if(user.isAdminDMT) {
+          this.route.navigate(['/admin/dmt']);
+        }else if(user.isAdminPolice) {
+          this.route.navigate(['/admin/police']);
+        } else {
+          this.route.navigate(['/']);
+        }
+      } catch (err) {
         console.log(err);
         alert(err);
-      });
+      }
     }
   }
 

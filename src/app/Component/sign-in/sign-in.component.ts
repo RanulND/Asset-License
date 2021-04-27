@@ -18,35 +18,44 @@ export class SignInComponent implements OnInit {
     email: '',
     password: ''
   };
-  
-  // alert = false;
-  // alertMsg : string;
 
   ngOnInit(): void {
+    const user = this.auth.getUserData();
+    if(user) {
+      if(user.isAdminDMT) {
+        this.route.navigate(['/admin/dmt']);
+      }else if(user.isAdminPolice) {
+        this.route.navigate(['/admin/police']);
+      } else {
+        this.route.navigate(['/']);
+      }
+    }   
   }
 
   async signInWithEmail(): Promise<void> {
     if (this.user.email === ''  || this.user.password === ''){
-      // this.alert = true;
-      // this.alert
       alert("Email or Password fields cannot be empty");
     }else {
-      this.auth.signInWithEmail(this.user.email, this.user.password)
-      .then(() => this.route.navigate(['/']))
-      .catch(err => {
+      try {
+        const res = await this.auth.signInWithEmail(this.user.email, this.user.password);
+        res.subscribe({
+          next: (data) => {
+            const user = data.data();
+            localStorage.setItem('userData', JSON.stringify(user));
+            if(user.isAdminDMT) {
+              this.route.navigate(['/admin/dmt']);
+            }else if(user.isAdminPolice) {
+              this.route.navigate(['/admin/police']);
+            } else {
+              this.route.navigate(['/']);
+            }
+          }
+        });
+      } catch (err) {
         console.log(err);
         alert(err);
-      });
+      }
     }
   }
-
-  // async signInWithGoogle(): Promise<void> {
-  //   await this.auth.SignIn('google')
-  //   .then(() => this.route.navigate(['/']))
-  //   .catch(err => {
-  //     console.log(err);
-  //     alert(err);
-  //   });
-  // }
 
 }

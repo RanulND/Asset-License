@@ -1,3 +1,4 @@
+<div *ngIf="!user || (user && !user.isAdminDMT && !user.isAdminPolice)">
 <app-navbar></app-navbar>
 <div class="content mb-3">
     <img class="headImage" src="..\assets\images\homeImage.jpg" alt="">
@@ -46,4 +47,6 @@
         </div>
     </div>
 </div>
+
 <app-footer [fixed]="'none'"></app-footer>
+</div>
