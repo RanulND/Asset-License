@@ -11,16 +11,21 @@
                 </div>
             </div>
             <div class="">
-                <a routerLink="/admin/dmt/user">
+                <a routerLink="/admin/dmt/dashboard/user/user.uid" *ngFor="let user of users">
+                    <div class="row text-center card" style="margin-left: 2%; margin-right: 2%; margin-top: 5px;"  *ngIf="!user.isAdminPolice && !user.isAdminDMT"> 
+                        <p class="p-2 user">{{user.nic}} - {{user.displayName}}</p>
+                    </div>
+                </a>
+                <!-- <a routerLink="/admin/dmt/dashboard/user">
                     <div class="row text-center card" style="margin-left: 2%; margin-right: 2%; margin-top: 5px;">
                         <p class="p-2 user">991470182V - Display Name</p>
                     </div>
                 </a>
-                <a routerLink="/admin/dmt/user">
+                <a routerLink="/admin/dmt/dashboard/user">
                     <div class="row text-center card" style="margin: 2%; margin-right: 2%; margin-top: 5px;">
                         <p class="p-2 user">991470182V - Display Name</p>
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>

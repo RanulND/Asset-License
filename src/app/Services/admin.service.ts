@@ -20,7 +20,7 @@ export class AdminService {
     return this.fireservice.collection('dmt').add(record);
   }
 
-  getAllRecord() {
+  getAllPoliceReports() {
     return this.fireservice.collection<any>('reports').snapshotChanges();
   }
 
@@ -29,4 +29,7 @@ export class AdminService {
     // return this.fireservice.collection('users').doc(nic).collection('reports').valueChanges({ idField: 'id' });
   }
 
+  getAllusers(){
+    return this.fireservice.collection<any>('users').snapshotChanges();
+  }
 }
