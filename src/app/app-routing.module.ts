@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminDMTComponent } from './Component/admin-dmt/admin-dmt.component';
-import { AdminPoliceComponent } from './Component/admin-police/admin-police.component';
+import { AdminDMTComponent } from './Container/admin-dmt/admin-dmt.component';
+import { AdminPoliceComponent } from './Container/admin-police/admin-police.component';
 import { SignInComponent } from './Component/sign-in/sign-in.component';
 import { AboutUsComponent } from './Container/about-us/about-us.component';
 import { ContactUsComponent } from './Container/contact-us/contact-us.component';

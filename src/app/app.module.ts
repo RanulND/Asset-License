@@ -26,8 +26,8 @@ import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.compo
 import { SignUpComponent } from './Component/sign-up/sign-up.component';
 import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 import { AuthService } from './Services/auth.service';
-import { AdminPoliceComponent } from './Component/admin-police/admin-police.component';
-import { AdminDMTComponent } from './Component/admin-dmt/admin-dmt.component';
+import { AdminPoliceComponent } from './Container/admin-police/admin-police.component';
+import { AdminDMTComponent } from './Container/admin-dmt/admin-dmt.component';
 import { DmtUserComponent } from './Container/dmt-user/dmt-user.component';
 import { DmtUserDashboardComponent } from './Container/dmt-user-dashboard/dmt-user-dashboard.component';
 import { DmtReservationMedicalComponent } from './Container/dmt-reservation-medical/dmt-reservation-medical.component';
