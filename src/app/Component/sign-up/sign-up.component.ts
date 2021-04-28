@@ -25,6 +25,10 @@ export class SignUpComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    const user = this.auth.getUserData();
+    if(user){
+      this.route.navigate(['/']);
+    }
   }
   async signUpWithEmail(): Promise<void> {
     if(this.user.email === '' || this.user.name === '' || this.user.password === '' || this.user.nic === ''){

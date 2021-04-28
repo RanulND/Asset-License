@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   user: User;
 
-  constructor(private authservice: AuthService) { }
+  constructor(public authservice: AuthService) { }
 
   ngOnInit(): void {
     this.authservice.user$.subscribe({
@@ -25,4 +25,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  loginAlert(){
+    alert("Please Login to reserve");
+  }
 }

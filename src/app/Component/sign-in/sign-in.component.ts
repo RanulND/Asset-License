@@ -58,4 +58,11 @@ export class SignInComponent implements OnInit {
     }
   }
 
+  handleOnKeyDown(e: KeyboardEvent): void {
+    if (e.key === 'Enter') {
+      // console.log("wada")
+      this.signInWithEmail();
+    }
+  }
+
 }

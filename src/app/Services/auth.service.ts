@@ -69,6 +69,7 @@ export class AuthService {
     await this.auth.signOut();
     this.authState = false;
     localStorage.removeItem('userData');
+    // localStorage.clear();
     return this.route.navigate(['/']);
   }
 

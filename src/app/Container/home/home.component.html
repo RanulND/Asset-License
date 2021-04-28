@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row mt-3">
+        <div class="row mt-3" *ngIf="authservice.authState">
             <p class="reserve text-center mb-5">Now is the time to reserve your dates. Make Your Reservation Here.
                 Before that makes sure that you are logged in.</p>
             <div class="col-6 text-center">
@@ -37,6 +37,33 @@
             <div class="col-6 text-center">
                 <div class="card p-3 shadow">
                      <div class="test">
+                    <img src="..\assets\images\exam.png" alt="" width="20%">
+                    <h3 class="text-center mt-2">Written Exams</h3>
+                    <p class="mt-1">You can reserve a time slot for your written test here</p>
+                </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="row mt-3" *ngIf="!authservice.authState">
+            <p class="reserve text-center mb-5">Now is the time to reserve your dates. Make Your Reservation Here.
+                Before that makes sure that you are logged in.</p>
+            <div class="col-6 text-center">
+                <div class="card p-3 shadow">
+                     <div class="test"  (click)="loginAlert()">
+                    <a>
+                        <img src="..\assets\images\exam.png" alt="" width="20%">
+                        <h3 class="text-center mt-2">Medical Exams</h3>
+                        <p class="mt-1">You can reserve a time slot for your medical test here</p>
+                    </a>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col-6 text-center">
+                <div class="card p-3 shadow">
+                     <div class="test" (click)="loginAlert()">
                     <img src="..\assets\images\exam.png" alt="" width="20%">
                     <h3 class="text-center mt-2">Written Exams</h3>
                     <p class="mt-1">You can reserve a time slot for your written test here</p>

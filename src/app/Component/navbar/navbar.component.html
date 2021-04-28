@@ -11,8 +11,11 @@
         <li class="nav-item">
           <a class="nav-link active" style="color: aliceblue;" aria-current="page" routerLink="/">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="auth.authState">
           <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/medical">Reservation</a>
+        </li>
+        <li class="nav-item" *ngIf="!auth.authState">
+          <a class="nav-link" href="#" style="color: aliceblue;" (click)="loginAlert()">Reservation</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/info">Facilities</a>
@@ -29,6 +32,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" routerLink="/aboutUs" style="color: aliceblue;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/user" *ngIf="auth.authState">My Account</a>
         </li>
       </ul>
       <form class="d-flex text-center" *ngIf="auth.authState">

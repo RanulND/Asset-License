@@ -1,6 +1,8 @@
+import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Services/auth.service';
+import { User } from 'src/app/Services/user.model';
 
 @Component({
   selector: 'app-navbar',
@@ -14,8 +16,18 @@ export class NavbarComponent implements OnInit {
     public auth: AuthService
   ) { }
 
+  user: User;
+
   ngOnInit(): void {
 
+    // this.auth.user$.subscribe({
+    //   next: (user) => {
+    //     this.user = user;
+    //   },
+    //   error: (err) => {
+    //     alert(err);
+    //   }
+    // });
   }
 
   signIn() {
@@ -28,5 +40,9 @@ export class NavbarComponent implements OnInit {
 
   signOut(){
     this.auth.signOut();
+  }
+
+  loginAlert(){
+    alert("Please Login to reserve");
   }
 }
