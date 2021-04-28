@@ -9,14 +9,17 @@ import { DmtReservationExamComponent } from './Container/dmt-reservation-exam/dm
 import { DmtReservationMedicalComponent } from './Container/dmt-reservation-medical/dmt-reservation-medical.component';
 import { DmtUserDashboardComponent } from './Container/dmt-user-dashboard/dmt-user-dashboard.component';
 import { DmtUserComponent } from './Container/dmt-user/dmt-user.component';
+import { ExamComponent } from './Container/exam/exam.component';
 import { HomeComponent} from './Container/home/home.component'
 import { InfoComponent } from './Container/info/info.component';
 import { LoginAdminComponent } from './Container/login-admin/login-admin.component';
 import { MedicalComponent } from './Container/medical/medical.component';
+import { ReservationComponent } from './Container/reservation/reservation.component';
 import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 import { UserAccComponent } from './Container/user-acc/user-acc.component';
 import { DmtAdminGuardGuard } from './Services/guards/dmt-admin-guard.guard';
+import { LoggedUserGuard } from './Services/guards/logged-user.guard';
 import { PoliceAdminGuardGuard } from './Services/guards/police-admin-guard.guard';
 import { UserGuardGuard } from './Services/guards/user-guard.guard';
 
@@ -39,7 +42,17 @@ const routes: Routes = [
   {
     path:'medical',
     component:MedicalComponent,
-    canActivate: [UserGuardGuard]
+    canActivate: [LoggedUserGuard]
+  },
+  {
+    path:'reservations',
+    component: ReservationComponent,
+    canActivate: [LoggedUserGuard]
+  },
+  {
+    path:'written-exam',
+    component: ExamComponent,
+    canActivate: [LoggedUserGuard]
   },
   // {
   //   path:'admin',
@@ -61,7 +74,7 @@ const routes: Routes = [
   {
     path:'user',
     component: UserAccComponent,
-    canActivate: [UserGuardGuard]
+    canActivate: [LoggedUserGuard]
   },
   {
     path: 'admin/police',

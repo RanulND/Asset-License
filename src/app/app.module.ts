@@ -33,6 +33,8 @@ import { DmtUserDashboardComponent } from './Container/dmt-user-dashboard/dmt-us
 import { DmtReservationMedicalComponent } from './Container/dmt-reservation-medical/dmt-reservation-medical.component';
 import { DmtReservationExamComponent } from './Container/dmt-reservation-exam/dmt-reservation-exam.component';
 import { DmtAdminNavbarComponent } from './Component/dmt-admin-navbar/dmt-admin-navbar.component';
+import { ReservationComponent } from './Container/reservation/reservation.component';
+import { ExamComponent } from './Container/exam/exam.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { DmtAdminNavbarComponent } from './Component/dmt-admin-navbar/dmt-admin-
     DmtReservationMedicalComponent,
     DmtReservationExamComponent,
     DmtAdminNavbarComponent,
+    ReservationComponent,
+    ExamComponent,
 
   ],
   imports: [

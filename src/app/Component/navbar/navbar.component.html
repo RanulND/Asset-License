@@ -12,7 +12,7 @@
           <a class="nav-link active" style="color: aliceblue;" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item" *ngIf="auth.authState">
-          <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/medical">Reservation</a>
+          <a class="nav-link" href="#" style="color: aliceblue;" routerLink="/reservations">Reservation</a>
         </li>
         <li class="nav-item" *ngIf="!auth.authState">
           <a class="nav-link" href="#" style="color: aliceblue;" (click)="loginAlert()">Reservation</a>
