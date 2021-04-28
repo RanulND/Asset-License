@@ -51,6 +51,10 @@ export class AuthService {
       isAdminDMT: false,
       nic: nic,
       displayName: name,
+      status_1: false,
+      status_2: false,
+      status_3:false,
+      status_4: false
       // policeRecord: []
     };
 

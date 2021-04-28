@@ -23,7 +23,7 @@ export class UserAccComponent implements OnInit {
       next: (user) => {
         this.user = user;
 
-        this.adminservice.getAllUserRrecord(user.nic).subscribe(data => {
+        this.adminservice.getAllUserPoliceRecord(user.nic).subscribe(data => {
           this.policeRecords = data.map(snap => {
             return {
               id: snap.payload.doc.id,

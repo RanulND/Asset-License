@@ -24,12 +24,16 @@ export class AdminService {
     return this.fireservice.collection<any>('reports').snapshotChanges();
   }
 
-  getAllUserRrecord(nic) {
+  getAllUserPoliceRecord(nic) {
     return this.fireservice.collection<any>('reports', ref => ref.where('nic', '==', nic)).snapshotChanges();
     // return this.fireservice.collection('users').doc(nic).collection('reports').valueChanges({ idField: 'id' });
   }
 
   getAllusers(){
     return this.fireservice.collection<any>('users').snapshotChanges();
+  }
+
+  getUserDmtRecord(nic){
+    return this.fireservice.collection<any>('users', ref => ref.where('nic', "==", nic)).snapshotChanges();
   }
 }

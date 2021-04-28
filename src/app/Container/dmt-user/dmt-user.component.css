@@ -2,3 +2,15 @@ input#flexCheckDefault:checked {
     background-color: #dc3545;
     border-color: #dc3545;
 }
+
+span.card.shadow{
+    color: aliceblue;
+    width: 40%;
+    border-radius: 3rem;
+}
+
+
+button.card.shadow{
+    border-radius: 3rem;
+    
+}

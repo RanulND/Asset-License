@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/Services/admin.service';
 import { AuthService } from 'src/app/Services/auth.service';
+import { User } from 'src/app/Services/user.model';
 
 @Component({
   selector: 'app-dmt-user-dashboard',
@@ -23,7 +24,7 @@ export class DmtUserDashboardComponent implements OnInit {
          }
         });
 
-        console.log(this.users);
+        // console.log(this.users);
       },
       error: (err) => {
         console.log(err);
@@ -31,5 +32,8 @@ export class DmtUserDashboardComponent implements OnInit {
 
     });
   }
-
+  userIdentify(nic){
+    localStorage.setItem('userNIC', JSON.stringify(nic));
+  }
+ 
 }
