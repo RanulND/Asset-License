@@ -20,17 +20,16 @@ export class AdminPoliceComponent implements OnInit {
   } 
 
   addRecord(){
-    //  alert("danata goda");
     let record = {};
     record['nic'] = this.nic;
     record['violation'] = this.violation;
     record['date'] = this.date;
 
-    this.policeAdminService.add_new_police_record(record).then(res => {
+    this.policeAdminService.addNewPoliceRecord(record).then(res => {
       this.nic = "";
       this.date = undefined;
       this.violation= "";
-      console.log(res);
+      // console.log(res);
       alert("Record has been uploaded successfully");
     }).catch(err => {
       console.log(err);

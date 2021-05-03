@@ -11,13 +11,13 @@ export class AdminService {
     public fireservice: AngularFirestore
   ) { }
 
-  add_new_police_record(record){
+  addNewPoliceRecord(record){
     return this.fireservice.collection('reports').add(record); // seperate collection
     // return this.fireservice.collection('users').doc(record.nic).collection('reports').add(record);
   }
 
-  add_new_dmt_record(record){
-    return this.fireservice.collection('dmt').add(record);
+  addNewDmtRecord(record){
+    return this.fireservice.collection('dmt').add(record); // call karanna ona
   }
 
   getAllPoliceReports() {
