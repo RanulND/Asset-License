@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MedicalComponent implements OnInit {
 
   constructor() { }
-
+  occ: string;
   ngOnInit(): void {
   }
 

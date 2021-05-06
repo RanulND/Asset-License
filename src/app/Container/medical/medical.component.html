@@ -1,3 +1,118 @@
 <app-navbar></app-navbar>
-<p>medical works!</p>
-<app-footer fixed = "signIn"></app-footer>
+    <div class="testbox">
+       <div class="content">
+        <div class="banner">
+          <h1>Online Medical Reservation</h1>
+        </div>
+        <br/>
+        <fieldset>
+          <legend>Applicant Information</legend><br>
+          <div class="item">
+            <label for="fname"> First Name<span>*</span></label>
+            <input id="fname" type="text" name="fname" required/>
+          </div>
+          <div class="item">
+            <label for="lname"> Last Name<span>*</span></label>
+            <input id="lname" type="text" name="lname" required/>
+          </div>
+          <div class="item">
+            <label for="initial">Middle Initial<span>*</span></label>
+            <input id="initial" type="text" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="initial">NIC<span>*</span></label>
+            <input id="initial" type="text" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="initial">Phone Number<span>*</span></label>
+            <input id="initial" type="number" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="initial">Email<span>*</span></label>
+            <input id="initial" type="text" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="instructions">Address</label>
+            <textarea id="instructions" rows="3"></textarea>
+          </div>
+          <div class="item">
+            <label for="initial">Occupation<span>*</span></label>
+            <input id="initial" type="text" name="initial" required [(ngModel)] = "occ" />
+          </div>
+          <div class="item">
+            <label for="bdate">Birth Date <span>*</span></label>
+            <input id="bdate" type="date" name="bdate" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="question">
+            <label>Gender</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_1" name="visit"/>
+                <label for="radio_1" class="radio"><span>Female</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_2" name="visit"/>
+                <label for="radio_2" class="radio"><span>Male</span></label>
+              </div>
+            </div>
+        </div>
+        <div class="question">
+            <label>Status of Your License</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_3" name="visit"/>
+                <label for="radio_3" class="radio"><span>License issue</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_4" name="visit"/>
+                <label for="radio_4" class="radio"><span>License Renew</span></label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <br/>
+        <fieldset>
+          <legend>Reservation Information</legend><br>
+          <div class="item">
+            <label for="date">Date<span>*</span></label>
+            <input id="date" type="date" name="date" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="item">
+            <p>Time</p>
+            <select>
+              <option selected value="" disabled selected></option>
+              <option value="m" >Morning</option>
+              <option value="a">Afternoon</option>
+              <option value="e">Evening</option>
+            </select>
+          </div>
+          <div class="question">
+            <label>Preferred Medical Center</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_5" name="physician"/>
+                <label for="radio_5" class="radio"><span>NMTI Nugegoda</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_6" name="physician"/>
+                <label for="radio_6" class="radio"><span>DMT Werehara</span></label>
+              </div>
+              
+            </div>
+          </div>
+          <div class="item">
+            <label for="instructions">Please describe if there any other information </label>
+            <textarea id="instructions" rows="3"></textarea>
+          </div>
+        </fieldset>
+        <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+    </div>
+    </div>
+    
+ 
+
+    <app-footer [fixed]="'none'"></app-footer>
