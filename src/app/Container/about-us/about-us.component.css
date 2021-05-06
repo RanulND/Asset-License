@@ -3,6 +3,12 @@
     left: 100px;
     right: 100px;
 }
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 370%;
+}
+
 #about-us{
     display:block; 
     width:100%; 
@@ -47,7 +53,7 @@
 }
 #about-us #about-intro h2{}
 #about-us #about-intro p{
-    text-align: center;
+    text-align: justify;
 }
 #about-us #about-intro p:first-child{}
 
