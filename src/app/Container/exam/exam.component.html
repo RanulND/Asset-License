@@ -1,1 +1,60 @@
-<p>exam works!</p>
+<app-navbar></app-navbar>
+    <div class="testbox">
+       <div class="content">
+        <div class="banner">
+          <h1>Online Examination Reservation</h1>
+        </div>
+        <br/>
+        <fieldset>
+          <legend>Applicant Information</legend><br>
+          <div class="item">
+            <label for="fname"> First Name<span>*</span></label>
+            <input id="fname" type="text" name="fname" required/>
+          </div>
+          <div class="item">
+            <label for="lname"> Last Name<span>*</span></label>
+            <input id="lname" type="text" name="lname" required/>
+          </div>
+          <div class="item">
+            <label for="initial">NIC<span>*</span></label>
+            <input id="initial" type="text" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="initial">Phone Number<span>*</span></label>
+            <input id="initial" type="number" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="initial">Email<span>*</span></label>
+            <input id="initial" type="text" name="initial" required/>
+          </div>
+          <div class="item">
+            <label for="bdate">Birth Date <span>*</span></label>
+            <input id="bdate" type="date" name="bdate" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+        </fieldset>
+        <br/>
+        <fieldset>
+          <legend>Reservation Information</legend><br>
+          <div class="item">
+            <label for="date">Date<span>*</span></label>
+            <input id="date" type="date" name="date" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="item">
+            <p>Time</p>
+            <select>
+              <option selected value="" disabled selected></option>
+              <option value="m" >Morning</option>
+              <option value="a">Afternoon</option>
+              <option value="e">Evening</option>
+            </select>
+          </div>
+        </fieldset>
+        <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+    </div>
+    </div>
+    
+    <app-footer [fixed]="'none'"></app-footer>
