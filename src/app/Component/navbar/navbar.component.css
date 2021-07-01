@@ -1,6 +1,52 @@
 .navbar-brand,
 .nav-item.nav-link{
-    color: antiquewhite;
+    /* color: antiquewhite; */
+    color: #222;
+    font-family: 'Roboto'; 
+}
+
+.navbar-brand{
+    padding-inline: 60px;
+}
+
+/* .nav-link.active{
+    color: #ff7300;
+} */
+
+.navbar{
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link{
+    font-family: 'Roboto';
+    font-size: 115%;
+    padding-inline: 15px;
+    letter-spacing: 0.1;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ff7300;
+    font-family: 'Roboto';
+}
+
+/* .navbar{
+    background-color: #2f2e2c;
+} */
+a.nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+a.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    left: 50%;
+    top: -1px;
+    background-color: #ff7300;
+    /* transition: all ease-in-out .2s; */
 }
 
 li{

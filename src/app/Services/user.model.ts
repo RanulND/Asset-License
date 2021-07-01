@@ -3,7 +3,7 @@ export class User {
     email: string;
     displayName: string;
     isAdminPolice: boolean;
-    isAdminDMT: boolean
+    isAdminDMT: boolean;
     nic: string;
     status_1:boolean;
     status_2:boolean;

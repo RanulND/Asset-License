@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    canActivate: [UserGuardGuard]
+    // canActivate: [UserGuardGuard]
   },
   {
     path:'aboutUs',
@@ -59,7 +59,7 @@ const routes: Routes = [
   //   component: LoginAdminComponent
   // },
   {
-    path:'info',
+    path:'facilities',
     component: InfoComponent,
     canActivate: [UserGuardGuard]
   },

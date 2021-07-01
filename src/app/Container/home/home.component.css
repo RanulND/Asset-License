@@ -13,11 +13,19 @@
 }
 
 .about{
-    background-color: #c92725;
-    color: aliceblue;
+    /* background-color: #c92725; */
+    /* background-color: #ffce2b;  */
+    color: #42413d;
+    height: 70vh;
+    /* color: aliceblue; */
     font-size: 115%;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.abt{
+    background-color: #ffce2b; 
+    border-radius: 1.3 rem
 }
 
 .reserve{
@@ -34,16 +42,36 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
+.about-btn:hover{
+    color: #ff7300;
+}
+
 .card{
     border-radius: 1.25rem;
 }
 
 .col-6:hover{
-    transform: scale(0.9);
-    transition: 0.2s;
+    transform: scale(1.04);
+    transition: 0.3s;
 }
 
 a:hover{
     transform: scale(1.1);
     transition: 0.2s;
+}
+
+.btn{
+    font-size: 120%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px grey;
+    padding-inline: 40px;
+    border-radius: 40px;
+    font-family: 'Roboto';
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #222;
+    color: #ff7300;
 }

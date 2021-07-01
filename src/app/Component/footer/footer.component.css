@@ -1,11 +1,16 @@
 .text{
-    color: aliceblue;
+    color: #222;
+    font-family: 'Roboto';
+    font-size: 115%;
 }
 
 .footer{
     width: 100%;
     /* position: fixed; */
     /* bottom: 0; */
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    box-shadow: 1px 1px 10px grey;
 }
 
 .fixed{
