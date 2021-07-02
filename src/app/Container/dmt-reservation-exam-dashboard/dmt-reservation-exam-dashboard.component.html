@@ -1,1 +1,15 @@
-<p>dmt-reservation-exam-dashboard works!</p>
+<app-dmt-admin-navbar></app-dmt-admin-navbar>
+<div class="container">
+<div class= "row"  *ngFor="let reservation of reservations">
+  
+    <div class=" col-6" >{{reservation.nic}}</div>
+    <div class=" col-6">{{reservation.Session}}</div>
+
+</div>
+</div>
+<!-- <div class="container">
+    <div class="row" >
+        <div class="col" >hah</div>
+        <div class="col">bah</div>
+    </div>
+    </div> -->
