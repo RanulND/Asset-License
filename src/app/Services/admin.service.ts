@@ -37,6 +37,9 @@ export class AdminService {
     return this.fireservice.collection<any>('users', ref => ref.where('nic', "==", nic)).snapshotChanges();
   }
  getAdminDmtRecord(day){
-   return this.fireservice.collection<any>('reservations', ref => ref.where('Date', '==', day)).snapshotChanges();
+   return this.fireservice.collection<any>('Exam Reservations', ref => ref.where('Date', '==', day)).snapshotChanges();
  }
+ getAdminDmtMedicalRecord(day){
+  return this.fireservice.collection<any>('Medical Reservations', ref => ref.where('Date', '==', day)).snapshotChanges();
+}
 }

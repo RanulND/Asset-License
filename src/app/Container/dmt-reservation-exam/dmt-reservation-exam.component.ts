@@ -8,11 +8,11 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./dmt-reservation-exam.component.css']
 })
 export class DmtReservationExamComponent{
-  private reservationCollection: AngularFirestoreCollection<Date>;
-  reservations: Observable<Date[]>;
+  private examReservationCollection: AngularFirestoreCollection<Date>;
+  examReservations: Observable<Date[]>;
  constructor(private readonly afs: AngularFirestore) {
-    this.reservationCollection = afs.collection<Date>('reservations');
-    this.reservations = this.reservationCollection.snapshotChanges().pipe(
+    this.examReservationCollection = afs.collection<Date>('reservations');
+    this.examReservations = this.examReservationCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() ;
        // const id = a.payload.doc.id;
