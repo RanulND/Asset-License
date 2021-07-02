@@ -1,12 +1,13 @@
 #heading1{
-    font-family: 'Archivo Black', sans-serif;
     font-size:50px;
+    font-weight: 700;
 }
 #heading2{
-    font-family: 'Archivo Black', sans-serif;
-    font-size:40px;
+    
+    font-size:50px;
+    font-weight: 700;
 }
 #formtext3{
-    font-family: 'Brygada 1918', serif;
-    font-size: 20px;
+ 
+    font-size: 30px;
 }
