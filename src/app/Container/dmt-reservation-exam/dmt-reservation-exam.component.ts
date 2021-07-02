@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class DmtReservationExamComponent{
   private reservationCollection: AngularFirestoreCollection<Date>;
   reservations: Observable<Date[]>;
-  constructor(private readonly afs: AngularFirestore) {
+ constructor(private readonly afs: AngularFirestore) {
     this.reservationCollection = afs.collection<Date>('reservations');
     this.reservations = this.reservationCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -21,6 +21,10 @@ export class DmtReservationExamComponent{
       }))
     );
   }
+  days = [{day:"2021/08/01",},{day:"2021/08/02",},{day:"2021/08/03",},{day:"2021/08/04",},{day:"2021/08/05",},{day:"2021/08/06",},{day:"2021/08/07",},];
 
+  dateIdentify(day){
+    localStorage.setItem('specificday', JSON.stringify(day));
+  }
 }
-  
+
