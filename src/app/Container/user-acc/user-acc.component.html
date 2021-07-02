@@ -1,16 +1,32 @@
 <app-navbar></app-navbar>
 
-
+<div class="container">
     <div class="profile">
-        <img align="left" class="image-lg" src="..\assets\images\FFCE2B.jpg" alt="Profile image example"/>
-        <img align="left" class="image-profile thumbnail" src="..\assets\images\logo.jpg" alt="Profile image example"/>
-        <div class="profile-text">
-           <p>{{user.displayName}}</p>
-            <h1>{{user.nic}}</h1>
-            <div class="st">
-            <app-status></app-status></div> 
-            <app-scrollbar></app-scrollbar></div> 
+        <div class="profile-header">
+            <div class="profile-header-cover"></div>
+            <div class="profile-header-content">
+               
+                <div class="profile-header-img">
+                    <img src="..\assets\images\logo.jpg" alt="" />
+                </div>
+                <div class="user-data">
+                        <h1>{{user.displayName}}</h1><span>{{user.nic}}</span>
+                    </div>
+                <div class="scroll">
+                    <app-scrollbar></app-scrollbar> 
+                </div>
+
+            </div>
         </div>
+    </div>
+</div> 
+
+<div class="st">
+    <app-status></app-status>
+</div> 
+           
+           
+       
         
        
             

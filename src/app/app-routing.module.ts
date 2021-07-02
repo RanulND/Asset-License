@@ -23,6 +23,7 @@ import { DmtAdminGuardGuard } from './Services/guards/dmt-admin-guard.guard';
 import { LoggedUserGuard } from './Services/guards/logged-user.guard';
 import { PoliceAdminGuardGuard } from './Services/guards/police-admin-guard.guard';
 import { UserGuardGuard } from './Services/guards/user-guard.guard';
+import { DmtReservationMedicalDashboardComponent } from './Container/dmt-reservation-medical-dashboard/dmt-reservation-medical-dashboard.component';
 
 const routes: Routes = [
   {
@@ -110,6 +111,11 @@ const routes: Routes = [
   {
     path: 'admin/dmt/reservation/exam',
     component:  DmtReservationExamDashboardComponent,
+    canActivate: [DmtAdminGuardGuard]
+  },
+  {
+    path: 'admin/dmt/reservation/medical',
+    component:  DmtReservationMedicalDashboardComponent,
     canActivate: [DmtAdminGuardGuard]
   }
 ];

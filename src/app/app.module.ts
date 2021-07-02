@@ -38,6 +38,7 @@ import { ExamComponent } from './Container/exam/exam.component';
 import { DmtReservationExamDashboardComponent } from './Container/dmt-reservation-exam-dashboard/dmt-reservation-exam-dashboard.component';
 import { StatusComponent } from './component/status/status.component';
 import { ScrollbarComponent } from './component/scrollbar/scrollbar.component';
+import { DmtReservationMedicalDashboardComponent } from './Container/dmt-reservation-medical-dashboard/dmt-reservation-medical-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { ScrollbarComponent } from './component/scrollbar/scrollbar.component';
     DmtReservationExamDashboardComponent,
     StatusComponent,
     ScrollbarComponent,
+    DmtReservationMedicalDashboardComponent,
 
   ],
   imports: [
