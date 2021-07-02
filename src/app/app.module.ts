@@ -35,7 +35,7 @@ import { DmtReservationExamComponent } from './Container/dmt-reservation-exam/dm
 import { DmtAdminNavbarComponent } from './Component/dmt-admin-navbar/dmt-admin-navbar.component';
 import { ReservationComponent } from './Container/reservation/reservation.component';
 import { ExamComponent } from './Container/exam/exam.component';
-import { DmtReservationExamDashboardComponent } from './container/dmt-reservation-exam-dashboard/dmt-reservation-exam-dashboard.component';
+import { DmtReservationExamDashboardComponent } from './Container/dmt-reservation-exam-dashboard/dmt-reservation-exam-dashboard.component';
 
 @NgModule({
   declarations: [

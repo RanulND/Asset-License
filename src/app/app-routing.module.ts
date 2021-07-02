@@ -15,6 +15,7 @@ import { InfoComponent } from './Container/info/info.component';
 import { LoginAdminComponent } from './Container/login-admin/login-admin.component';
 import { MedicalComponent } from './Container/medical/medical.component';
 import { ReservationComponent } from './Container/reservation/reservation.component';
+import { DmtReservationExamDashboardComponent } from './Container/dmt-reservation-exam-dashboard/dmt-reservation-exam-dashboard.component';
 import { SignInPageComponent } from './Container/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './Container/sign-up-page/sign-up-page.component';
 import { UserAccComponent } from './Container/user-acc/user-acc.component';
@@ -105,6 +106,11 @@ const routes: Routes = [
     path: 'admin/dmt/exam-reservation',
     component: DmtReservationExamComponent,
     canActivate: [DmtAdminGuardGuard],
+  },
+  {
+    path: 'admin/dmt/reservation/exam',
+    component:  DmtReservationExamDashboardComponent,
+    canActivate: [DmtAdminGuardGuard]
   }
 ];
 
