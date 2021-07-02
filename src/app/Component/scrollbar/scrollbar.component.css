@@ -18,7 +18,8 @@
     display: inline-block;
     font-size: 25px;
     position: relative;
-    left: 38px;
+    left: 50px;
+    width: 700px;
   }
   #nbutton:hover {
     background-color:  rgb(189, 189, 189); /* Green */
@@ -26,13 +27,21 @@
   }
   table {
     border-collapse: collapse;
-    width: 100%;
+    width: 700px;
+  }
+  th{
+    position: fixed;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 700px;
   }
   
   th, td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    width: 700px;
 
   }
   

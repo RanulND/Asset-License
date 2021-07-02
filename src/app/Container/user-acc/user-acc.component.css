@@ -1,3 +1,8 @@
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
 .profile img.image-lg{
     z-index: 0;
     width: 100%;  
@@ -52,7 +57,3 @@
    padding: 0%;
    margin: 0%;
 }
-body {
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-  }
