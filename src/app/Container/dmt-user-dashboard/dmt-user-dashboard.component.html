@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="">
-                <a routerLink="/admin/dmt/dashboard/user/user.uid" *ngFor="let user of users" (click)="userIdentify(user.nic)">
+                <a routerLink="admin/dmt/dashboard/user/user.uid" *ngFor="let user of users" (click)="userIdentify(user.nic)">
                     <div class="row text-center card" style="margin-left: 2%; margin-right: 2%; margin-top: 5px;"  *ngIf="!user.isAdminPolice && !user.isAdminDMT"> 
                         <p class="p-2 user">{{user.nic}} - {{user.displayName}}</p>
                     </div>

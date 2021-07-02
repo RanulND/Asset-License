@@ -36,5 +36,7 @@ export class AdminService {
   getUserDmtRecord(nic){
     return this.fireservice.collection<any>('users', ref => ref.where('nic', "==", nic)).snapshotChanges();
   }
-
+ getAdminDmtRecord(day){
+   return this.fireservice.collection<any>('reservations', ref => ref.where('Date', '==', day)).snapshotChanges();
+ }
 }
