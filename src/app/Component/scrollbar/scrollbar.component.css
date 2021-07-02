@@ -29,13 +29,7 @@
     border-collapse: collapse;
     width: 700px;
   }
-  th{
-    position: fixed;
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    width: 700px;
-  }
+  
   
   th, td {
     padding: 8px;
