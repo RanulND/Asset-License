@@ -111,7 +111,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		color: #999999;
+		color: #1a1a1a;
 	}
 
 	html, input, select, textarea {
@@ -303,9 +303,7 @@ input, select, textarea {
 		text-align: right;
 	}
 
-	input, select, textarea {
-		color: #999999;
-	}
+	
 
 	a {
 		color: inherit;
@@ -329,7 +327,7 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(144, 144, 144, 0.075);
+		background: rgba(109, 109, 109, 0.075);
 		border-color: #e6e6e6;
 	}
 
