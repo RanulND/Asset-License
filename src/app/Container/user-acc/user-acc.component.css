@@ -1,11 +1,58 @@
-.spinner-border{
-    display: inline-block;
-    width: 4.5rem;
-    height: 4.5rem;
-    vertical-align: text-bottom;
-    border: .4em solid currentColor;
-    border-right-color: transparent;
-    border-radius: 50%;
-    -webkit-animation: .75s linear infinite spinner-border;
-    animation: .75s linear infinite spinner-border;
+.profile img.image-lg{
+    z-index: 0;
+    width: 100%;  
+	height: 350px;
+    margin-bottom: 10px;
 }
+
+.image-profile
+{
+    margin: -180px 10px 0px 50px;
+    z-index: 9;
+    width: 15%; 
+	
+}
+.profile-text
+{
+    z-index: 9;
+	position: relative;
+	top: -110px;
+
+}
+.profile-text>p{
+    
+    font-weight: 700;
+    font-size:16px;
+   
+
+}
+
+@media (max-width:768px)
+{
+    
+.profile-text>h1{
+    font-weight: 700;
+    font-size:10px;
+}
+
+
+.image-profile
+{
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; 
+}
+}
+.st
+{
+    width: 100%;
+    position: relative;
+   left: 10px;
+   align-items: right;
+   padding: 0%;
+   margin: 0%;
+}
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
