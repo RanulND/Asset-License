@@ -86,7 +86,7 @@ html, body {
     .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
     color:  #669999;
     }
-    .item input:hover, .item select:hover,{
+    .item input:hover, .item select:hover{
     border: 1px solid transparent;
     box-shadow: 0 0 3px 0  #669999;
     color: #669999;
