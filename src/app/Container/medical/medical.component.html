@@ -9,11 +9,11 @@
           <legend>Applicant Information</legend><br>
           <div class="item">
             <label for="fname"> First Name<span>*</span></label>
-            <input id="fname" type="text" name="fname" required/>
+            <input id="fname" type="text" name="fname" required [(ngModel)] = "user.fname"/>
           </div>
           <div class="item">
             <label for="lname"> Last Name<span>*</span></label>
-            <input id="lname" type="text" name="lname" required/>
+            <input id="lname" type="text" name="lname" required [(ngModel)] = "user.lname"/>
           </div>
           <div class="item">
             <label for="initial">Middle Initial<span>*</span></label>
@@ -21,7 +21,7 @@
           </div>
           <div class="item">
             <label for="initial">NIC<span>*</span></label>
-            <input id="initial" type="text" name="initial" required/>
+            <input id="initial" type="text" name="initial" required [(ngModel)] = "user.nic"/>
           </div>
           <div class="item">
             <label for="initial">Phone Number<span>*</span></label>
@@ -37,7 +37,7 @@
           </div>
           <div class="item">
             <label for="initial">Occupation<span>*</span></label>
-            <input id="initial" type="text" name="initial" required [(ngModel)] = "occ" />
+            <input id="initial" type="text" name="initial" required  />
           </div>
           <div class="item">
             <label for="bdate">Birth Date <span>*</span></label>
@@ -76,16 +76,17 @@
           <legend>Reservation Information</legend><br>
           <div class="item">
             <label for="date">Date<span>*</span></label>
-            <input id="date" type="date" name="date" required/>
+            <input id="date" type="date" name="date" required [(ngModel)] = "user.date"/>
             <i class="fas fa-calendar-alt"></i>
           </div>
           <div class="item">
             <p>Time</p>
             <select>
               <option selected value="" disabled selected></option>
-              <option value="m" >Morning</option>
-              <option value="a">Afternoon</option>
-              <option value="e">Evening</option>
+              <option value="Morning" [(ngModel)]="user.session">Morning</option>
+              <!-- <option value="a">Afternoon</option> -->
+              <option value="Evening" [(ngModel)]="user.session" >Evening</option>
+              
             </select>
           </div>
           <div class="question">
@@ -108,7 +109,7 @@
           </div>
         </fieldset>
         <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+          <button type="submit" href="/"  (click) = "onSubmit()">Submit</button>
         </div>
     </div>
     </div>
