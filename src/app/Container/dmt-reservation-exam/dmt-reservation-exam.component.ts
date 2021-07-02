@@ -9,18 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class DmtReservationExamComponent{
   private reservationCollection: AngularFirestoreCollection<Date>;
-  getUnique(array){
-    var uniqueArray = [];
-    
-    // Loop through array values
-    for(var i=0; i < array.length; i++){
-        if(uniqueArray.indexOf(array[i]) === -1) {
-            uniqueArray.push(array[i]);
-        }
-    }
-    return uniqueArray;
-}
-  reservations: getUnique(Observable<Date[]>;
+  reservations: Observable<Date[]>;
   constructor(private readonly afs: AngularFirestore) {
     this.reservationCollection = afs.collection<Date>('reservations');
     this.reservations = this.reservationCollection.snapshotChanges().pipe(
