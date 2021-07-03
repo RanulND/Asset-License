@@ -28,7 +28,7 @@ export class MedicalComponent implements OnInit {
   ngOnInit(): void {
     const user = this.auth.getUserData();
     if(user){
-      this.route.navigate(['/']);
+      // this.route.navigate(['/']);
     }
   }
 
