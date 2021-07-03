@@ -1,78 +1,105 @@
-.headImage{
-    margin-top: -10px;
-    width: 100%;
+.headImage {
+  /* margin-top: -10px; */
+  width: 100%;
+  border-radius: 225px;
+  margin-top: 0;
 }
 
-.row{
-    width: 100%;
+.row {
+  width: 100%;
 }
-.col-6{
-    border-radius: 5px;
-    /* border-color: black; */
-    box-shadow: black;
+.col-6 {
+  border-radius: 5px;
+  /* border-color: black; */
+  box-shadow: black;
 }
 
-.about{
-    /* background-color: #c92725; */
-    /* background-color: #ffce2b;  */
-    color: #42413d;
+.about {
+  /* background-color: #c92725; */
+  /* background-color: #ffce2b;  */
+  color: #42413d;
+  height: 70vh;
+  /* color: aliceblue; */
+  font-size: 115%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.abt {
+  background-color: #ffce2b;
+  border-radius: 1.3 rem;
+}
+
+.reserve {
+  font-size: 140%;
+}
+
+.about-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 30px 8px 30px;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about-btn:hover {
+  color: #ff7300;
+}
+
+.card {
+  border-radius: 1.25rem;
+}
+
+.col-6:hover {
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.btn {
+  font-size: 120%;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px grey;
+  padding-inline: 40px;
+  border-radius: 40px;
+  font-family: "Roboto";
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  background-color: #222;
+  color: #ff7300;
+}
+
+.content {
+  background-image: url(../../../assets/images/header.png);
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 400px) {
+  .about {
+    height: 130vh;
+  }
+
+  .header {
+    height: 125vh;
+  }
+}
+
+@media (min-width: 401px) {
+  .about {
+    width: 100%;
     height: 70vh;
-    /* color: aliceblue; */
-    font-size: 115%;
-    padding-left: 10%;
-    padding-right: 10%;
-}
+  }
 
-.abt{
-    background-color: #ffce2b; 
-    border-radius: 1.3 rem
+  .header {
+    height: 100vh;
+  }
 }
-
-.reserve{
-    font-size: 140%;
-}
-
-.about-btn{
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 6px 30px 8px 30px;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.about-btn:hover{
-    color: #ff7300;
-}
-
-.card{
-    border-radius: 1.25rem;
-}
-
-.col-6:hover{
-    transform: scale(1.04);
-    transition: 0.3s;
-}
-
-a:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-}
-
-.btn{
-    font-size: 120%;
-    background-color: #fff;
-    box-shadow: 1px 1px 10px grey;
-    padding-inline: 40px;
-    border-radius: 40px;
-    font-family: 'Roboto';
-}
-
-.btn:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-    background-color: #222;
-    color: #ff7300;
-}
-

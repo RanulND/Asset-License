@@ -1,28 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark pt-3 pb-3">
+<nav class="navbar navbar-expand-lg navbar-light pt-3 pb-3">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="" style="color: aliceblue;">Asset License</a>
-        <button class="btn btn-outline-danger"  (click) = "signOut()">Sign Out</button>
+        <a class="navbar-brand" routerLink="">Asset License</a>
+        <button class="btn btn-outline-danger" (click)="signOut()">Sign Out</button>
     </div>
-        
+
 </nav>
-<div class="container">
-    <h1 class="text-center mt-3">Police - Administration</h1>
-    <div class="mt-3 mb-3">
-        <div class="form-group input row">
-            <label class="mb-3">NIC number</label>
-            <input type="text" class="form-control" placeholder="NIC" [(ngModel)] ="nic">
+<div class="container" >
+    <div style="height: 70vh;" class="row align-items-center">
+        <h1 class="text-center mt-3 ">Police - Administration</h1>
+        <div class="mt-3 mb-3">
+            <div class="form-group input row">
+                <label class="mb-3">NIC number</label>
+                <input type="text" class="form-control" placeholder="NIC" [(ngModel)]="nic">
+            </div>
+            <div class="form-group input row mt-3">
+                <label class="mb-3">Date</label>
+                <input type="date" class="form-control" placeholder="Date" [(ngModel)]="date">
+            </div>
+            <div class="form-group input row mt-3">
+                <label class="mb-3">Violations/ Errors</label>
+                <input type="text" class="form-control" placeholder="violation" [(ngModel)]="violation">
+            </div>
         </div>
-        <div class="form-group input row mt-3">
-            <label class="mb-3">Date</label>
-            <input type="date" class="form-control" placeholder="Date" [(ngModel)]= "date" >
-        </div>
-        <div class="form-group input row mt-3">
-            <label class="mb-3">Violations/ Errors</label>
-            <input type="text" class="form-control" placeholder="violation" [(ngModel)] = "violation">
+        <div class="row">
+            <button class="btn btn-danger mt-2" (click)="addRecord()" [disabled]="!nic  || !date || !violation ">Add
+                record</button>
         </div>
     </div>
-    <div class="row">
-    <button class="btn btn-danger mt-2" (click)="addRecord()" [disabled] = "!nic  || !date || !violation ">Add record</button>
-</div>
+   
 </div>
 <app-footer [fixed]="'SignUp'"></app-footer>

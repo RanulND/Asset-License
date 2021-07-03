@@ -18,8 +18,13 @@
     display: inline-block;
     font-size: 25px;
     position: relative;
-    left: 50px;
-    width: 700px;
+    left: 500px;
+    bottom: 100px;
+    top: 5px;
+    width: 500px;
+    padding-right: 0%;
+    margin-right: 0%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
   #nbutton:hover {
     background-color:  rgb(189, 189, 189); /* Green */
@@ -40,3 +45,14 @@
   }
   
   tr:hover {background-color:#dfdede;}
+  @media (max-width: 991.98px){
+  #nbutton {
+    -webkit-transform: scale(0.80);
+    -moz-transform: scale(0.80);
+    -ms-transform: scale(0.80);
+    -o-transform: scale(0.80);
+    transform: scale(0.80);
+    width: 500px;
+    left: 0%;
+}
+  }

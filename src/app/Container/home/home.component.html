@@ -1,8 +1,8 @@
 <div *ngIf="!user || (user && !user.isAdminDMT && !user.isAdminPolice)">
     <app-navbar></app-navbar>
-    <!-- <div class="content"> -->
+    <div class="content">
         <div class="container">
-            <div class="row align-items-center"  style="height: 100vh;">
+            <div class="row align-items-center header">
                 <div class="col-md-6 text-center">
                     <h2 style="font-weight: bold; font-size: 370%; text-transform: uppercase;" class="my-5">Asset License App</h2>
                     <h4 style="font-style: italic; font-size: 180%;" class="mb-5">The online reservation Platform</h4>
@@ -17,12 +17,13 @@
                 </div>
             </div>
         </div>  
+    </div>
         <div class="container-fluid" style="padding-left: 0px; padding-right: 0px; overflow: hidden;">
             <div class="mt-2 abt">
-                <div class="about row align-items-center pt-5 pb-5 " id="about" style="width: 100%;">
+                <div class="about row align-items-center pt-5 pb-5 " id="about">
                     <h2 class="mb-4" style="font-weight: bold;font-size:3rem;">About Us
                     </h2>
-                    <p class="py-4" style="font-size: 115%;">Asset License is a website designed for your convenience to alleviate the daily congestion and
+                    <p class="py-4" style="font-size: 115%;text-align: justify;">Asset License is a website designed for your convenience to alleviate the daily congestion and
                         busyness by digitizing the majority of the licensing process with DMT. Check your license
                         history
                         and find the status of your license through us. Join us in the process of getting your license
@@ -37,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div style="background:#f0efee;">
+        <div style="background:#fff;">
         <div class="container py-5">
             <div class="row py-3"  style="margin-bottom:0" *ngIf="authservice.authState">
                 <h2 class="text-center my-3" style="font-weight: 600; font-size: 300%;text-transform: uppercase;">Reservations</h2>
