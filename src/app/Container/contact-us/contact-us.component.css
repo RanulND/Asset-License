@@ -1,13 +1,14 @@
-#heading1{
-    font-size:50px;
-    font-weight: 700;
+#heading1 {
+  font-size: 60px;
+  font-weight: 550;
+  color: rgb(51, 49, 49);
+  font-style: italic;
 }
-#heading2{
-    
-    font-size:50px;
-    font-weight: 700;
+#heading2 {
+  font-size: 40px;
+  font-weight: 700;
 }
-#formtext3{
- 
-    font-size: 30px;
+#formtext3 {
+  font-size: 25px;
+  font-family: "Roboto";
 }
