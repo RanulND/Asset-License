@@ -1,10 +1,3 @@
-.container{
-    padding-top: 75px;
-    padding-bottom: 100px;
-    width: 1000px;
-    margin: auto;
-}
-
 .medical , .exams{
     padding-top: 30px;
     padding-bottom: 30px;
@@ -42,10 +35,6 @@ a {
     text-decoration: none;
 }
 
-.major {
-    background-color: #e7e7e7;
-}
-
-table.documents , table.documents td{
-    border: 3px solid #e7e7e7;
+.col-sm-6 {
+    text-align: center;
 }
